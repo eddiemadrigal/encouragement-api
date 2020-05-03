@@ -7,6 +7,12 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
+const encouragementRouter = require('../routes/encouragement');
+const userRouter = require('../routes/users');
+
+server.get('/api/encouragement', encouragementRouter);
+server.get('/api/user', userRouter);
+
 server.get('/', (req, res) => {
   res.send('API up ...');
 })
