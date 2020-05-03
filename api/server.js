@@ -7,8 +7,8 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-const encouragementRouter = require('../routes/encouragement');
-const userRouter = require('../routes/users');
+const encouragementRouter = require('../routes/encouragement/encouraging-route');
+const userRouter = require('../routes/users/user-router');
 
 server.get('/api/encouragement', encouragementRouter);
 server.get('/api/user', userRouter);
